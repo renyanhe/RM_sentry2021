@@ -1,0 +1,627 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.25.3.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: r DELL, r, LIC=CRMW3-ANEXQ-QIB5M-XJCTB-GH9E8-AX8FZ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.25.2.0
+Toolchain Path:  E:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DCM.DLL V1.17.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.35.0
+Dialog DLL:      TCM.DLL V1.35.1.0
+ 
+<h2>Project:</h2>
+E:\战队FYT_RYH\FYT代码\21赛季\RM2021_sentry 初测v1.1\RM2020_sentry\CSU_RM2020_BASE\keilproject_stm32f4\RM2020.uvprojx
+Project File Date:  01/17/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'RM2020'
+compiling sentry_holder.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_holder.c(72): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			 if( CAN1_DATA.M_206.Cur_postion >= 0.14 )  dir = 0;
+..\sentry\sentry_holder.c(111): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_206.Tar_Postion>=0.15)    CAN1_DATA.M_206.Tar_Postion = 0.15;
+..\sentry\sentry_holder.c(114): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_208.Tar_Postion>=1.11)   CAN1_DATA.M_208.Tar_Postion = 1.11;
+..\sentry\sentry_holder.c(115): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_208.Tar_Postion <= 0.93) CAN1_DATA.M_208.Tar_Postion = 0.93;
+..\sentry\sentry_holder.c(134): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_206.Tar_Postion>=0.15)    CAN1_DATA.M_206.Tar_Postion = 0.15;
+..\sentry\sentry_holder.c(137): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_208.Tar_Postion>=1.11)   CAN1_DATA.M_208.Tar_Postion = 1.11;
+..\sentry\sentry_holder.c(138): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_208.Tar_Postion <= 0.93) CAN1_DATA.M_208.Tar_Postion = 0.93;
+..\sentry\sentry_holder.c: 13 warnings, 0 errors
+compiling sentry_classis.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_classis.c(78): warning:  #1-D: last line of file ends without a newline
+  }
+..\sentry\sentry_classis.c: 7 warnings, 0 errors
+compiling sentry_pull.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_pull.c(39): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	 if(CAN2_DATA.M_203.Tar_Postion - CAN2_DATA.M_203.Cur_postion > 0.5)
+..\sentry\sentry_pull.c(51): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	 if(CAN2_DATA.M_204.Tar_Postion - CAN2_DATA.M_204.Cur_postion > 0.5)
+..\sentry\sentry_pull.c: 8 warnings, 0 errors
+compiling main.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\main.c: 6 warnings, 0 errors
+compiling sentry_vision.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_vision.c(28): warning:  #1-D: last line of file ends without a newline
+  }
+..\sentry\sentry_vision.c: 7 warnings, 0 errors
+compiling sentry_friction.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\sentry\sentry_Friction.h(5): warning:  #1295-D: Deprecated declaration sentry_friction - give arg types
+  void sentry_friction();
+..\sentry\sentry_friction.c: 7 warnings, 0 errors
+compiling sentry_ultrasonic.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\sentry_ultrasonic.c: 6 warnings, 0 errors
+compiling pid.c...
+compiling Kalman_filtering.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\sentry\Kalman_filtering.c: 6 warnings, 0 errors
+compiling amplitude_limiting_and_LPF.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\sentry\amplitude_limiting_and_LPF.c(20): warning:  #1-D: last line of file ends without a newline
+  }
+..\sentry\amplitude_limiting_and_LPF.c: 8 warnings, 0 errors
+compiling communicate.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\user_other\communicate.c(271): warning:  #177-D: variable "frame_length_temp"  was declared but never referenced
+    uint16_t frame_length_temp=HEADER_LEN;
+..\user\user_other\communicate.c: 7 warnings, 0 errors
+compiling task_init.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\sentry\sentry_Friction.h(5): warning:  #1295-D: Deprecated declaration sentry_friction - give arg types
+  void sentry_friction();
+..\user\user_app\task_init.c(47): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "task_f"
+    	task_insert_CCM(task_UI, NULL, 5);		//oled用户交互界面
+..\user\user_app\task_init.c: 8 warnings, 0 errors
+compiling user_can.c...
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\user\user_other\user_can.c(93): warning:  #177-D: variable "i"  was declared but never referenced
+  	size_t		i;
+..\user\user_other\user_can.c: 7 warnings, 0 errors
+compiling user_usart.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\user_other\user_usart.c(90): warning:  #177-D: variable "x_tar_base"  was declared but never referenced
+  static float x_tar_base,x_tar_base_last,holder_x_target2;
+..\user\user_other\user_usart.c(90): warning:  #177-D: variable "x_tar_base_last"  was declared but never referenced
+  static float x_tar_base,x_tar_base_last,holder_x_target2;
+..\user\user_other\user_usart.c(90): warning:  #177-D: variable "holder_x_target2"  was declared but never referenced
+  static float x_tar_base,x_tar_base_last,holder_x_target2;
+..\user\user_other\user_usart.c(92): warning:  #177-D: variable "vision_a"  was declared but never referenced
+  static float vision_a,v_last;
+..\user\user_other\user_usart.c(92): warning:  #177-D: variable "v_last"  was declared but never referenced
+  static float vision_a,v_last;
+..\user\user_other\user_usart.c(96): warning:  #177-D: variable "k"  was declared but never referenced
+  static float k = 0.250;
+..\user\user_other\user_usart.c(97): warning:  #177-D: variable "kf_q3"  was declared but never referenced
+  static float kf_q3 = 0.3,kf_r3 = 1;
+..\user\user_other\user_usart.c(97): warning:  #177-D: variable "kf_r3"  was declared but never referenced
+  static float kf_q3 = 0.3,kf_r3 = 1;
+..\user\user_other\user_usart.c: 14 warnings, 0 errors
+compiling UI.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\sentry\sentry_friction.h(5): warning:  #1295-D: Deprecated declaration sentry_friction - give arg types
+  void sentry_friction();
+..\user\user_other\UI.c: 7 warnings, 0 errors
+compiling task_nimin.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\base_app\task_nimin.c: 6 warnings, 0 errors
+compiling task_led.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\base_app\task_led.c: 6 warnings, 0 errors
+compiling task_judge.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\base_app\task_judge.c: 6 warnings, 0 errors
+compiling task_UI.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\base_app\task_UI.c: 6 warnings, 0 errors
+compiling task_remote.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\base_app\task_remote.c: 6 warnings, 0 errors
+compiling task_Ano.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\base_app\task_Ano.c: 6 warnings, 0 errors
+compiling dbus.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\dbus.c: 6 warnings, 0 errors
+compiling keyboard.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\keyboard.c: 6 warnings, 0 errors
+compiling timer.c...
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\user\device\timer.c(34): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		 speed = (float)(CAN1_DATA.M_206.angle - last_pos)*14.6484375/4;
+..\user\device\timer.c(31): warning:  #177-D: variable "count"  was declared but never referenced
+  	 static int count = 0;
+..\user\device\timer.c: 8 warnings, 0 errors
+compiling task_mpu.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\base_app\task_mpu.c: 6 warnings, 0 errors
+compiling uart_dma.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\uart_dma.c: 6 warnings, 0 errors
+compiling can.c...
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\user\device\can.c: 6 warnings, 0 errors
+compiling oled.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\oled.c: 6 warnings, 0 errors
+compiling rng_led.c...
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\user\device\rng_led.c: 6 warnings, 0 errors
+compiling judgement_info.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\driver\judgement_info.c: 6 warnings, 0 errors
+compiling nimin_info.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\driver\nimin_info.c: 6 warnings, 0 errors
+compiling mpu.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\mpu.c: 6 warnings, 0 errors
+compiling usart.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\usart.c: 6 warnings, 0 errors
+compiling HC_ultrasonic.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\HC_ultrasonic.c: 6 warnings, 0 errors
+compiling UI_lib.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\driver\UI_lib.c: 6 warnings, 0 errors
+compiling makos_print.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\MAKOS\kernel\makos_print.c: 6 warnings, 0 errors
+compiling makos_message.c...
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\MAKOS\kernel\makos_message.c: 6 warnings, 0 errors
+compiling makos_resolver.c...
+..\user\device\timer.h(26): warning:  #1295-D: Deprecated declaration Count_init - give arg types
+  void Count_init();
+..\sentry\sentry_holder.h(5): warning:  #1295-D: Deprecated declaration sentry_vision - give arg types
+  void sentry_vision();
+..\sentry\sentry_classis.h(5): warning:  #1295-D: Deprecated declaration Sentry_Classis - give arg types
+  void Sentry_Classis();
+..\sentry\sentry_pull.h(11): warning:  #1295-D: Deprecated declaration Can_out - give arg types
+  void Can_out();
+..\sentry\sentry_ultrasonic.h(6): warning:  #1295-D: Deprecated declaration sentry_ultrasonic - give arg types
+  void sentry_ultrasonic ();
+..\sentry\amplitude_limiting_and_LPF.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\MAKOS\kernel\makos_resolver.c: 6 warnings, 0 errors
+linking...
+Program Size: Code=43774 RO-data=3938 RW-data=3708 ZI-data=1163076  
+FromELF: creating hex file...
+".\Objects\RM2020.axf" - 0 Error(s), 251 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.2.0.pack
+                Keil.STM32F4xx_DFP.2.2.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_RM2020
+  E:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.2.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:13
+</pre>
+</body>
+</html>
