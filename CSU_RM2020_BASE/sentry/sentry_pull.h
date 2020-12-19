@@ -8,5 +8,5 @@
 void sentry_pull(void *param);
 void pull_ceshi(void *param);
 void heat_ceshi(void *param);
-void Can_out();
+void Can_out(void);
 #endif

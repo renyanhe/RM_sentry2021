@@ -103,7 +103,7 @@ void data_show(void)
 
 void data_show_callback(void)
 {
-	OLED_printf(0,0,"can1tx:%d",canrate.send.can1_tx);
+	OLED_printf(0,0,"power:%f",judge_recv_mesg.ext_power_heat_data.chassis_power);
 	OLED_printf(64,0,"can2tx:%d",canrate.send.can2_tx);
 	OLED_printf(0,1,"can2_201:%d",canrate.send.rx_motor[0]);
 	OLED_printf(0,2,"can2_202:%d",canrate.send.rx_motor[1]);

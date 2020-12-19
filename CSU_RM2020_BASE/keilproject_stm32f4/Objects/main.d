@@ -98,4 +98,4 @@
 .\objects\main.o: ..\user\user_other\communicate.h
 .\objects\main.o: ..\user\driver\judgement_info.h
 .\objects\main.o: ..\sentry\sentry_ultrasonic.h
-.\objects\main.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\main.o: ..\sentry\LPF_and_test.h

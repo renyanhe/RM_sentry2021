@@ -97,4 +97,4 @@
 .\objects\sentry_friction.o: ..\user\user_other\communicate.h
 .\objects\sentry_friction.o: ..\user\driver\judgement_info.h
 .\objects\sentry_friction.o: ..\sentry\sentry_ultrasonic.h
-.\objects\sentry_friction.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\sentry_friction.o: ..\sentry\LPF_and_test.h

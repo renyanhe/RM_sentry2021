@@ -95,6 +95,6 @@
 .\objects\sentry_pull.o: ..\sentry\sentry_classis.h
 .\objects\sentry_pull.o: ..\sentry\sentry_pull.h
 .\objects\sentry_pull.o: ..\sentry\sentry_ultrasonic.h
-.\objects\sentry_pull.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\sentry_pull.o: ..\sentry\LPF_and_test.h
 .\objects\sentry_pull.o: ..\user\user_other\communicate.h
 .\objects\sentry_pull.o: ..\user\driver\judgement_info.h

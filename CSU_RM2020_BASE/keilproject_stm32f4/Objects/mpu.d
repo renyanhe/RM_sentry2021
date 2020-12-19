@@ -97,4 +97,4 @@
 .\objects\mpu.o: ..\user\user_other\communicate.h
 .\objects\mpu.o: ..\user\driver\judgement_info.h
 .\objects\mpu.o: ..\sentry\sentry_ultrasonic.h
-.\objects\mpu.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\mpu.o: ..\sentry\LPF_and_test.h

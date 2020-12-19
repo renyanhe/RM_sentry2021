@@ -97,7 +97,7 @@
 .\objects\task_remote.o: ..\user\user_other\communicate.h
 .\objects\task_remote.o: ..\user\driver\judgement_info.h
 .\objects\task_remote.o: ..\sentry\sentry_ultrasonic.h
-.\objects\task_remote.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\task_remote.o: ..\sentry\LPF_and_test.h
 .\objects\task_remote.o: ..\user\user_app\task_init.h
 .\objects\task_remote.o: ..\user\base_app\task_led.h
 .\objects\task_remote.o: ..\user\device\dbus.h

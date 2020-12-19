@@ -98,5 +98,5 @@
 .\objects\dbus.o: ..\user\user_other\communicate.h
 .\objects\dbus.o: ..\user\driver\judgement_info.h
 .\objects\dbus.o: ..\sentry\sentry_ultrasonic.h
-.\objects\dbus.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\dbus.o: ..\sentry\LPF_and_test.h
 .\objects\dbus.o: ..\user\driver\irq_dead_check.h

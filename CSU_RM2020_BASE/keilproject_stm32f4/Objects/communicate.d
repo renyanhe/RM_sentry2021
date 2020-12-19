@@ -96,4 +96,4 @@
 .\objects\communicate.o: ..\sentry\sentry_classis.h
 .\objects\communicate.o: ..\sentry\sentry_pull.h
 .\objects\communicate.o: ..\sentry\sentry_ultrasonic.h
-.\objects\communicate.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\communicate.o: ..\sentry\LPF_and_test.h

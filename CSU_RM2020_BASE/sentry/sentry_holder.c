@@ -7,47 +7,47 @@
 下偏航		0x205 yaw
 */
 /*
-空载调参：CAN1_DATA.M_205.PID_Speed ,20,0.5,2,10000
-          CAN1_DATA.M_205.PID_Postion ,5000,10,20,10000
+空载调参：PID_Speed ,20,0.5,2,10000
+          PID_Postion ,5000,10,20,10000
 带载：
 上偏航		0x207 yaw
-					CAN1_DATA.M_207.PID_Speed ,20,0.02,5,10000
+					CAN1_DATA.M_207.PID_Speed ,  20,0.02,5,10000
           CAN1_DATA.M_207.PID_Postion ,20000,50,100,10000
 										
-上俯仰		0x208 pitch:限位：0.93——1.11
-					CAN1_DATA.M_208.PID_Speed ,15,0.1,1,10000
-          CAN1_DATA.M_208.PID_Postion ,25000,50,10,10000
+上俯仰		0x208 pitch:限位：0.97——1.11
+					CAN1_DATA.M_208.PID_Speed ,  15,0.01,5,25000
+          CAN1_DATA.M_208.PID_Postion ,25000,5,200,19000
 					
 下偏航		0x205 yaw_2
 					
-下俯仰		0x206 pitch_2:限位： -0.06——0.15
+下俯仰		0x206 pitch_2:限位： -0.01——0.15
 */
 /*修改意见：云台俯仰电机出现抗积分饱和现象，后期测试抗积分饱和pid算法*/
 	
 void Init_hlolder()
 {
-   PID_Struct_Init(&CAN1_DATA.M_205.PID_Speed ,20,0.02,5,10000);
-	 PID_Struct_Init(&CAN1_DATA.M_205.PID_Postion ,20000,50,100,10000);
+   PID_Struct_Init(&CAN1_DATA.M_205.PID_Speed ,  25,0.03,10,15000);
+	 PID_Struct_Init(&CAN1_DATA.M_205.PID_Postion ,20000,5,100,10000);
 	
-	 PID_Struct_Init(&CAN1_DATA.M_206.PID_Speed ,15,0.1,1,10000);
-	 PID_Struct_Init(&CAN1_DATA.M_206.PID_Postion ,25000,50,10,10000);
+	 PID_Struct_Init(&CAN1_DATA.M_206.PID_Speed ,  20,0.01,5,25000);
+	 PID_Struct_Init(&CAN1_DATA.M_206.PID_Postion ,25000,5,200,19000);
 	
-	 PID_Struct_Init(&CAN1_DATA.M_207.PID_Speed ,20,0.02,5,10000);
-	 PID_Struct_Init(&CAN1_DATA.M_207.PID_Postion ,20000,50,100,10000);
+	 PID_Struct_Init(&CAN1_DATA.M_207.PID_Speed ,  25,0.03,10,15000);
+	 PID_Struct_Init(&CAN1_DATA.M_207.PID_Postion ,20000,5,100,10000);
 	
-	 PID_Struct_Init(&CAN1_DATA.M_208.PID_Speed ,15,0.1,1,10000);
-   PID_Struct_Init(&CAN1_DATA.M_208.PID_Postion ,25000,50,10,10000);
+	 PID_Struct_Init(&CAN1_DATA.M_208.PID_Speed ,  15,0.01,5,25000);
+   PID_Struct_Init(&CAN1_DATA.M_208.PID_Postion ,25000,5,200,19000);
 }
 
 u8 flag_R = RP_S_MID;
-int i = 15;
+int i = 20;
 char flag_holder;//控制位
 u8 dir=1;
-int16_t remote_yaw,speed_o;
+int16_t remote_yaw;
 int16_t remote_yaw2;
 int16_t remote_pitch;
 int16_t remote_pitch2;
-float cur_pos1,cur_pos2,cur_pos3,cur_pos4,tur_pos1,tur_pos2,tur_pos3,tur_pos4;
+float cur_pos1,cur_pos2,cur_pos3,cur_pos4,tur_pos1,tur_pos2,tur_pos3,tur_pos4,speed_o8,speed_o7,speed_o6,speed_o5;
 void Updata_Out()
 {
    p_sentry sentry;
@@ -92,28 +92,14 @@ void Updata_Out()
 		 }   
 		// int i = 10;
 	 }
-	 if(flag_R == RP_S_MID)//左拨杆中为同步控制：右摇杆的左右上下，可以与底盘同时测试
+	 if(flag_R == RP_S_MID)//左拨杆中云台停止
 	 {
-		 flag_holder = 0;
-		  if(i>0)//保持原位置
-			{
-				CAN1_DATA.M_205.Tar_Postion = CAN1_DATA.M_205.Cur_postion;
-				CAN1_DATA.M_206.Tar_Postion = CAN1_DATA.M_206.Cur_postion;
-				CAN1_DATA.M_207.Tar_Postion = CAN1_DATA.M_207.Cur_postion;
-				CAN1_DATA.M_208.Tar_Postion = CAN1_DATA.M_208.Cur_postion;
-				i--;
-			}
-			else
-			{
-				CAN1_DATA.M_205.Tar_Postion += (float)remote_yaw/330000;//注意这里除数与计算方法
-				CAN1_DATA.M_207.Tar_Postion += (float)remote_yaw/330000;
-				CAN1_DATA.M_206.Tar_Postion += (float)remote_pitch/330000;
-				if(CAN1_DATA.M_206.Tar_Postion>=0.15)    CAN1_DATA.M_206.Tar_Postion = 0.15;
-				if(CAN1_DATA.M_206.Tar_Postion <= -0.06) CAN1_DATA.M_206.Tar_Postion = -0.06;
-				CAN1_DATA.M_208.Tar_Postion += (float)remote_pitch/330000;
-				if(CAN1_DATA.M_208.Tar_Postion>=1.11)   CAN1_DATA.M_208.Tar_Postion = 1.11;
-				if(CAN1_DATA.M_208.Tar_Postion <= 0.93) CAN1_DATA.M_208.Tar_Postion = 0.93;
-			}
+		  flag_holder = 2;
+			CAN1_DATA.M_205.speed_out = 0;
+			CAN1_DATA.M_206.speed_out = 0;
+			CAN1_DATA.M_207.speed_out = 0;
+		  CAN1_DATA.M_208.speed_out = 0;
+		  i = 10;
 	 }
 	 if(flag_R == RP_S_UP)//分开控制；底盘此次必须自动或停止
 	 {
@@ -122,20 +108,24 @@ void Updata_Out()
 			{
 				CAN1_DATA.M_205.Tar_Postion = CAN1_DATA.M_205.Cur_postion;
 				CAN1_DATA.M_206.Tar_Postion = CAN1_DATA.M_206.Cur_postion;
+				if(CAN1_DATA.M_206.Tar_Postion>=0.15)    CAN1_DATA.M_206.Tar_Postion = 0.15;
+				if(CAN1_DATA.M_206.Tar_Postion <= -0.01) CAN1_DATA.M_206.Tar_Postion = -0.01;
 				CAN1_DATA.M_207.Tar_Postion = CAN1_DATA.M_207.Cur_postion;
 				CAN1_DATA.M_208.Tar_Postion = CAN1_DATA.M_208.Cur_postion;
+				if(CAN1_DATA.M_208.Tar_Postion>=1.11)   CAN1_DATA.M_208.Tar_Postion = 1.11;
+				if(CAN1_DATA.M_208.Tar_Postion <= 0.97) CAN1_DATA.M_208.Tar_Postion = 0.97;
 				i--;
 			}
 			else
 			{
-				CAN1_DATA.M_205.Tar_Postion += (float)remote_yaw/330000;//注意这里除数与计算方法
-				CAN1_DATA.M_207.Tar_Postion += (float)remote_yaw2/330000;
-				CAN1_DATA.M_206.Tar_Postion += (float)remote_pitch/330000;
+				CAN1_DATA.M_205.Tar_Postion += (float)remote_yaw/930000;//注意这里除数与计算方法
+				CAN1_DATA.M_207.Tar_Postion += (float)remote_yaw2/930000;
+				CAN1_DATA.M_206.Tar_Postion += (float)remote_pitch/930000;
 				if(CAN1_DATA.M_206.Tar_Postion>=0.15)    CAN1_DATA.M_206.Tar_Postion = 0.15;
-				if(CAN1_DATA.M_206.Tar_Postion <= -0.06) CAN1_DATA.M_206.Tar_Postion = -0.06;
-				CAN1_DATA.M_208.Tar_Postion += (float)remote_pitch2/330000;
+				if(CAN1_DATA.M_206.Tar_Postion <= -0.01) CAN1_DATA.M_206.Tar_Postion = -0.01;
+				CAN1_DATA.M_208.Tar_Postion += (float)remote_pitch2/930000;
 				if(CAN1_DATA.M_208.Tar_Postion>=1.11)   CAN1_DATA.M_208.Tar_Postion = 1.11;
-				if(CAN1_DATA.M_208.Tar_Postion <= 0.93) CAN1_DATA.M_208.Tar_Postion = 0.93;
+				if(CAN1_DATA.M_208.Tar_Postion <= 0.96) CAN1_DATA.M_208.Tar_Postion = 0.96;
 			}
 	 } 
 	 if(flag_holder == 0)
@@ -145,11 +135,13 @@ void Updata_Out()
 		 CAN1_DATA.M_207.Tar_speed = PID_Update_Incre(&CAN1_DATA.M_207.PID_Postion,CAN1_DATA.M_207.Tar_Postion,CAN1_DATA.M_207.Cur_postion);
 		 CAN1_DATA.M_208.Tar_speed = PID_Update_Incre(&CAN1_DATA.M_208.PID_Postion,CAN1_DATA.M_208.Tar_Postion,CAN1_DATA.M_208.Cur_postion);
 	 } 
-	  CAN1_DATA.M_205.speed_out = PID_Update_Incre(&CAN1_DATA.M_205.PID_Speed,CAN1_DATA.M_205.Tar_speed,CAN1_DATA.M_205.Cur_speed);
+	 if(flag_holder != 2)
+	 {
+		CAN1_DATA.M_205.speed_out = PID_Update_Incre(&CAN1_DATA.M_205.PID_Speed,CAN1_DATA.M_205.Tar_speed,CAN1_DATA.M_205.Cur_speed);
 	  CAN1_DATA.M_206.speed_out = PID_Update_Incre(&CAN1_DATA.M_206.PID_Speed,CAN1_DATA.M_206.Tar_speed,CAN1_DATA.M_206.Cur_speed);
-//    CAN1_DATA.M_207.speed_out = PID_Update_Incre(&CAN1_DATA.M_207.PID_Speed,CAN1_DATA.M_207.Tar_speed,CAN1_DATA.M_207.Cur_speed);
-//    CAN1_DATA.M_208.speed_out = PID_Update_Incre(&CAN1_DATA.M_208.PID_Speed,CAN1_DATA.M_208.Tar_speed,CAN1_DATA.M_208.Cur_speed);
-															 
+    CAN1_DATA.M_207.speed_out = PID_Update_Incre(&CAN1_DATA.M_207.PID_Speed,CAN1_DATA.M_207.Tar_speed,CAN1_DATA.M_207.Cur_speed);
+    CAN1_DATA.M_208.speed_out = PID_Update_Incre(&CAN1_DATA.M_208.PID_Speed,CAN1_DATA.M_208.Tar_speed,CAN1_DATA.M_208.Cur_speed);
+	 }													 
 	 tur_pos1 = CAN1_DATA.M_205.Tar_Postion;
 	 tur_pos2 = CAN1_DATA.M_206.Tar_Postion;
 	 tur_pos3 = CAN1_DATA.M_207.Tar_Postion;
@@ -158,7 +150,10 @@ void Updata_Out()
 	 cur_pos2 = CAN1_DATA.M_206.Cur_postion;
 	 cur_pos3 = CAN1_DATA.M_207.Cur_postion;
 	 cur_pos4 = CAN1_DATA.M_208.Cur_postion;
-	 speed_o = CAN1_DATA.M_206.speed_out;
+	 speed_o5 = CAN1_DATA.M_205.speed_out;
+	 speed_o6 = CAN1_DATA.M_206.speed_out;
+	 speed_o7 = CAN1_DATA.M_207.speed_out;
+	 speed_o8 = CAN1_DATA.M_208.speed_out;
 }
 
 void sentry_holder(void *param)     //云台任务

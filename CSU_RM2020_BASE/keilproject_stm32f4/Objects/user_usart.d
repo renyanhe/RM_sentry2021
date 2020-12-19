@@ -98,7 +98,7 @@
 .\objects\user_usart.o: ..\user\user_other\communicate.h
 .\objects\user_usart.o: ..\user\driver\judgement_info.h
 .\objects\user_usart.o: ..\sentry\sentry_ultrasonic.h
-.\objects\user_usart.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\user_usart.o: ..\sentry\LPF_and_test.h
 .\objects\user_usart.o: ..\user\user_app\task_holder.h
 .\objects\user_usart.o: ..\user\base_app\task_nimin.h
 .\objects\user_usart.o: ..\user\driver\nimin_info.h

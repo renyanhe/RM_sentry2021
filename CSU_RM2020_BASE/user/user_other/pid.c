@@ -57,6 +57,24 @@ float PID_vision(PID_IncreType* PID,float err)  //哨兵视觉PID
 	return PID->out;
 }
 
+float PID_Update_Iq(PID_IncreType* PID,float tar,float cur) //抗积分饱和pid
+{
+	float Speed_OutPreSat, Up, Ui, Ud;
+
+	PID->e0 = tar - cur;  //读取现在的误差，用于kp控制
+
+	Up = PID->kp*PID->e0;//比例部分
+	Ui = Ui + PID->ki*Up + PID->ki*PID->e2;//积分部分
+	Ud = PID->kd*(PID->e0 - PID->e1);
+
+	Speed_OutPreSat = Up + Ui + Ud;
+  PID->out = range(Speed_OutPreSat, -PID->limit, PID->limit);
+	PID->e2 = PID->out - Speed_OutPreSat;
+	PID->e1 = PID->e0;
+	
+	return PID->out;
+}
+
 float PID_Update_Absolute2(PID_AbsoluteType* PID,float tar,float cur)
 {
 	float pe, ie, de;

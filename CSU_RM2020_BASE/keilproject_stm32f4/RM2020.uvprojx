@@ -386,11 +386,6 @@
               <FileType>1</FileType>
               <FilePath>..\user\main.c</FilePath>
             </File>
-            <File>
-              <FileName>headfile.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\user\base_app\headfile.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -432,9 +427,9 @@
               <FilePath>..\sentry\Kalman_filtering.c</FilePath>
             </File>
             <File>
-              <FileName>amplitude_limiting_and_LPF.c</FileName>
+              <FileName>LPF_and_test.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\sentry\amplitude_limiting_and_LPF.c</FilePath>
+              <FilePath>..\sentry\LPF_and_test.c</FilePath>
             </File>
           </Files>
         </Group>

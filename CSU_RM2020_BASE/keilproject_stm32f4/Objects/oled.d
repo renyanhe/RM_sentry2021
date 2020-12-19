@@ -97,6 +97,6 @@
 .\objects\oled.o: ..\user\user_other\communicate.h
 .\objects\oled.o: ..\user\driver\judgement_info.h
 .\objects\oled.o: ..\sentry\sentry_ultrasonic.h
-.\objects\oled.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\oled.o: ..\sentry\LPF_and_test.h
 .\objects\oled.o: ..\user\device\oledfont.h
 .\objects\oled.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

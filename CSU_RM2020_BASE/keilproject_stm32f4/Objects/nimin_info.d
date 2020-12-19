@@ -98,5 +98,5 @@
 .\objects\nimin_info.o: ..\user\user_other\communicate.h
 .\objects\nimin_info.o: ..\user\driver\judgement_info.h
 .\objects\nimin_info.o: ..\sentry\sentry_ultrasonic.h
-.\objects\nimin_info.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\nimin_info.o: ..\sentry\LPF_and_test.h
 .\objects\nimin_info.o: ..\user\base_app\task_nimin.h

@@ -14,7 +14,7 @@ void Init_classis()
 }
 u8 flag = RP_S_MID;
 int16_t remote_speed;
-int16_t curspeed;
+float curspeed;
 float cur_classis1,cur_classis2;
 void Update_out()
 {
@@ -52,10 +52,10 @@ void Update_out()
 	 }
 		if(flag == RP_S_UP)
 	 {
-		  CAN2_DATA.M_202.Tar_speed = -remote_speed;
+		  CAN2_DATA.M_202.Tar_speed = -3*remote_speed;
 		  CAN2_DATA.M_202.Tar_I = PID_Update_Incre(&CAN2_DATA.M_202.PID_Speed,CAN2_DATA.M_202.Tar_speed,CAN2_DATA.M_202.Cur_speed);
 		 
-		  CAN2_DATA.M_201.Tar_speed =  remote_speed;	    
+		  CAN2_DATA.M_201.Tar_speed =  3*remote_speed;	    
 		  CAN2_DATA.M_201.Tar_I = PID_Update_Incre(&CAN2_DATA.M_201.PID_Speed,CAN2_DATA.M_201.Tar_speed,CAN2_DATA.M_201.Cur_speed);
 	 } 
 	 
@@ -65,7 +65,7 @@ void Update_out()
 	 cur_classis1 = CAN2_DATA.M_201.Cur_I;
 	 cur_classis2 = CAN2_DATA.M_202.Cur_I;
 }
-void Sentry_Classis()  
+void Sentry_Classis(void *param)  
 {
 	 Init_classis();
 	 while(1)
@@ -73,6 +73,6 @@ void Sentry_Classis()
 		  Update_out();
 		  Can_out();
 		  task_delay_ms(1);
-//		  print_wave(1,2,&remote_speed);
+		  print_wave(2,4,&curspeed,&judge_recv_mesg.ext_power_heat_data.chassis_power);
 	 }
 }

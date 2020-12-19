@@ -97,7 +97,7 @@
 .\objects\task_ui.o: ..\user\user_other\communicate.h
 .\objects\task_ui.o: ..\user\driver\judgement_info.h
 .\objects\task_ui.o: ..\sentry\sentry_ultrasonic.h
-.\objects\task_ui.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\task_ui.o: ..\sentry\LPF_and_test.h
 .\objects\task_ui.o: ..\user\driver\UI_lib.h
 .\objects\task_ui.o: ..\user\device\keyboard.h
 .\objects\task_ui.o: ..\user\device\oled.h

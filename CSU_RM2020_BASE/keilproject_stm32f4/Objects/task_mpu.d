@@ -97,7 +97,7 @@
 .\objects\task_mpu.o: ..\user\user_other\communicate.h
 .\objects\task_mpu.o: ..\user\driver\judgement_info.h
 .\objects\task_mpu.o: ..\sentry\sentry_ultrasonic.h
-.\objects\task_mpu.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\task_mpu.o: ..\sentry\LPF_and_test.h
 .\objects\task_mpu.o: ..\user\device\mpu.h
 .\objects\task_mpu.o: ..\user\device\imu_packet.h
 .\objects\task_mpu.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

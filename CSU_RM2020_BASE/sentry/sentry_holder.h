@@ -2,5 +2,5 @@
 #define _HOLDER_H_
 #include "headfile.h"
 void sentry_holder(void *param);
-void sentry_vision();
+void sentry_vision(void *param);
 #endif

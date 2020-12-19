@@ -97,4 +97,4 @@
 .\objects\rng_led.o: ..\user\user_other\communicate.h
 .\objects\rng_led.o: ..\user\driver\judgement_info.h
 .\objects\rng_led.o: ..\sentry\sentry_ultrasonic.h
-.\objects\rng_led.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\rng_led.o: ..\sentry\LPF_and_test.h

@@ -97,5 +97,5 @@
 .\objects\keyboard.o: ..\user\user_other\communicate.h
 .\objects\keyboard.o: ..\user\driver\judgement_info.h
 .\objects\keyboard.o: ..\sentry\sentry_ultrasonic.h
-.\objects\keyboard.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\keyboard.o: ..\sentry\LPF_and_test.h
 .\objects\keyboard.o: ..\user\device\oled.h

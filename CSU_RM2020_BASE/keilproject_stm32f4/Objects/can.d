@@ -98,6 +98,6 @@
 .\objects\can.o: ..\user\user_other\communicate.h
 .\objects\can.o: ..\user\driver\judgement_info.h
 .\objects\can.o: ..\sentry\sentry_ultrasonic.h
-.\objects\can.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\can.o: ..\sentry\LPF_and_test.h
 .\objects\can.o: ..\user\user_app\task_holder.h
 .\objects\can.o: ..\user\device\motor.h

@@ -7,7 +7,7 @@
 ".\objects\sentry_holder.o"
 ".\objects\sentry_vision.o"
 ".\objects\kalman_filtering.o"
-".\objects\amplitude_limiting_and_lpf.o"
+".\objects\lpf_and_test.o"
 ".\objects\task_init.o"
 ".\objects\user_can.o"
 ".\objects\user_usart.o"

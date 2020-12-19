@@ -23,6 +23,6 @@ typedef struct can_rate
 extern can_rate_t canrate;
 
 void TIM12_Int_Init(u16 arr,u16 psc);
-void Count_init();
+void Count_init(void);
 extern volatile u8 frame;
 #endif

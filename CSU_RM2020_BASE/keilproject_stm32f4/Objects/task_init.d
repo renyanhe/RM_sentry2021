@@ -98,7 +98,7 @@
 .\objects\task_init.o: ..\user\user_other\communicate.h
 .\objects\task_init.o: ..\user\driver\judgement_info.h
 .\objects\task_init.o: ..\sentry\sentry_ultrasonic.h
-.\objects\task_init.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\task_init.o: ..\sentry\LPF_and_test.h
 .\objects\task_init.o: ..\user\base_app\task_judge.h
 .\objects\task_init.o: ..\user\base_app\task_UI.h
 .\objects\task_init.o: ..\user\driver\UI_lib.h

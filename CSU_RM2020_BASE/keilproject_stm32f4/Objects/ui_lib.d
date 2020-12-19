@@ -97,7 +97,7 @@
 .\objects\ui_lib.o: ..\user\user_other\communicate.h
 .\objects\ui_lib.o: ..\user\driver\judgement_info.h
 .\objects\ui_lib.o: ..\sentry\sentry_ultrasonic.h
-.\objects\ui_lib.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\ui_lib.o: ..\sentry\LPF_and_test.h
 .\objects\ui_lib.o: ..\user\device\oled.h
 .\objects\ui_lib.o: ..\user\driver\UI_lib.h
 .\objects\ui_lib.o: ..\user\user_other\UI.h

@@ -2,5 +2,5 @@
 #define _CLASSIS_H_
 #include "headfile.h"
 
-void Sentry_Classis();
+void Sentry_Classis(void *param);
 #endif

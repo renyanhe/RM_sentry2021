@@ -97,4 +97,4 @@
 .\objects\kalman_filtering.o: ..\user\user_other\communicate.h
 .\objects\kalman_filtering.o: ..\user\driver\judgement_info.h
 .\objects\kalman_filtering.o: ..\sentry\sentry_ultrasonic.h
-.\objects\kalman_filtering.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\kalman_filtering.o: ..\sentry\LPF_and_test.h

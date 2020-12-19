@@ -296,7 +296,7 @@ void send_wave()
 函数功能：向山外上位机输出1到8个通道的波形
 形参说明：number：变量数目
 		  length：变量大小，以字节为单位
-备注：调用示例：print_wave(3,1,(uint8_t *)&send_date_1,(uint8_t *)&send_date_2,(uint8_t *)&send_date_3);
+备注：调用示例：print_wave(3,1,(uint8_t *)&send_date_1,(uint8_t *)&send_date_2,(uint8_t *)&send_date_3);//float是4字节
 **************/
 void print_wave(u8 number, u8 length, ...)
 {

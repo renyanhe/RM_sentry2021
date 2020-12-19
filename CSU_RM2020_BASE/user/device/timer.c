@@ -28,10 +28,10 @@ volatile float speed = 0;
 volatile int last_pos = 0;
 void TIM5_IRQHandler(void)
 {
-	 static int count = 0;
+	 //static int count = 0;
    if(TIM_GetITStatus(TIM5, TIM_IT_Update) != RESET)//Òç³ö
 	 {
-		 speed = (float)(CAN1_DATA.M_206.angle - last_pos)*14.6484375/4;
+		 speed = (float)(CAN1_DATA.M_206.angle - last_pos)*14.6484375f/4;
 		 last_pos = CAN1_DATA.M_206.angle;
 		/*  if(count++ == 1000)
 			{

@@ -97,4 +97,4 @@
 .\objects\makos_print.o: ..\user\user_other\communicate.h
 .\objects\makos_print.o: ..\user\driver\judgement_info.h
 .\objects\makos_print.o: ..\sentry\sentry_ultrasonic.h
-.\objects\makos_print.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\makos_print.o: ..\sentry\LPF_and_test.h

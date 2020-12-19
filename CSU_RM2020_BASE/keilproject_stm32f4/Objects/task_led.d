@@ -97,7 +97,7 @@
 .\objects\task_led.o: ..\user\user_other\communicate.h
 .\objects\task_led.o: ..\user\driver\judgement_info.h
 .\objects\task_led.o: ..\sentry\sentry_ultrasonic.h
-.\objects\task_led.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\task_led.o: ..\sentry\LPF_and_test.h
 .\objects\task_led.o: ..\user\device\imu_packet.h
 .\objects\task_led.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\task_led.o: ..\user\device\imu_data_decode.h

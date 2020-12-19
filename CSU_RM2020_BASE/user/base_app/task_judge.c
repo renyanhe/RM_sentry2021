@@ -41,7 +41,7 @@ u8 send_judge_G = 1;//自定义数据发送开启标志
   * @retval 
   */
 	
-int power = 0;
+float power = 0;
 void task_judge()
 {
 //	u8 light=0;
@@ -127,13 +127,14 @@ void task_judge()
 			//printf("max_HP:      %d\r\n",judge_recv_mesg.game_robot_state.max_HP);
 			//printf("remain_HP:   %d\r\n",judge_recv_mesg.game_robot_state.remain_HP);	
       power = judge_recv_mesg.ext_power_heat_data.chassis_power;
-			printf("power:       %f\r\n",judge_recv_mesg.ext_power_heat_data.chassis_power);
-		  printf("speed:       %f\r\n",judge_recv_mesg.ext_shoot_data.bullet_speed);		
+//		  print_wave(1,4,&power);
+//			printf("power:       %f\r\n",judge_recv_mesg.ext_power_heat_data.chassis_power);
+//		  printf("speed:       %f\r\n",judge_recv_mesg.ext_shoot_data.bullet_speed);		
 			//printf("heat:       %d\r\n",judge_recv_mesg.ext_power_heat_data.shooter_heat0);			
 		//}
 //		judge_send_float(0x0001,0x0101,8.7,15.9,5.3,0x04);//自定义数据发送
 //		judge_send_UI(0x0003,0x0103);
-		task_delay_ms(1000);
+		task_delay_ms(5);//注意这个可以给到500ms
 	}
 	
 }

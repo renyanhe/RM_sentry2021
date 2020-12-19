@@ -97,4 +97,4 @@
 .\objects\timer.o: ..\user\user_other\communicate.h
 .\objects\timer.o: ..\user\driver\judgement_info.h
 .\objects\timer.o: ..\sentry\sentry_ultrasonic.h
-.\objects\timer.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\timer.o: ..\sentry\LPF_and_test.h

@@ -54,8 +54,8 @@ void	task_init(void* param)
 //		    task_insert(sentry_vision, NULL, 3);
  	      task_insert(sentry_holder, NULL, 3);
 //	      task_insert(Sentry_Classis,NULL,4);
-//	  		task_insert(sentry_friction,NULL,4);
-//	  		task_insert(sentry_pull,NULL,4);
+	  		task_insert(sentry_friction,NULL,4);
+	  		task_insert(sentry_pull,NULL,4);
 //	      task_insert(pull_ceshi,NULL,2);
 //	      task_insert(heat_ceshi,NULL,2);
 	  //  	task_insert(sentry_ultrasonic,NULL,2);

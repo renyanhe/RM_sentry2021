@@ -16,7 +16,7 @@ void vupdata()
 	 CAN1_DATA.M_208.speed_out = PID_Update_Incre(&CAN1_DATA.M_208.PID_Speed,CAN1_DATA.M_208.Tar_speed,CAN1_DATA.M_208.Cur_speed);
 }
 
-void sentry_vision()
+void sentry_vision(void *param)
 {
    vision_init();
 	 while(1)

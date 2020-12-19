@@ -97,4 +97,4 @@
 .\objects\hc_ultrasonic.o: ..\user\user_other\communicate.h
 .\objects\hc_ultrasonic.o: ..\user\driver\judgement_info.h
 .\objects\hc_ultrasonic.o: ..\sentry\sentry_ultrasonic.h
-.\objects\hc_ultrasonic.o: ..\sentry\amplitude_limiting_and_LPF.h
+.\objects\hc_ultrasonic.o: ..\sentry\LPF_and_test.h

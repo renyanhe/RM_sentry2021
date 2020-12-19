@@ -13,17 +13,17 @@
 #define min(a, b)			(a<b? a:b)
 #define range(x, a, b)		(min(max(x, a), b))//a-最小值   b-最大值
 
-typedef struct 
-{
-	float limit;
-	float kp;
-	float ki;
-	float kd;
-	float e0;
-	float e1;
-	float e2;
-	float out;
-} PID_IncreType;//增量式PID
+typedef struct                       //typedef struct
+{                                    //{
+	float limit;                       //	float err;
+	float kp;                          //	float err_last;
+	float ki;                          //	float Kp;
+	float kd;                          //	float Ki;
+	float e0;                          //	float Kd;
+	float e1;                          //	float out;
+	float e2;                          //	float limit;
+	float out;                         //	float SatError;
+} PID_IncreType;//增量式PID          //}PID_Iq_t;//抗积分饱和PID
 
 typedef struct 
 {
@@ -41,10 +41,11 @@ float PID_Update_Incre(PID_IncreType* PID,float tar,float cur);
 float PID_Update_Absolute2(PID_AbsoluteType* PID,float tar,float cur);
 float PID_Update_Absolute3(PID_AbsoluteType* PID,float tar,float cur);
 float PID_Update_Absolute4(PID_AbsoluteType* PID,float tar,float cur);
-void PID_Struct_Init(PID_IncreType* PID,float kp,float ki,float kd,float out_max);
+float PID_Update_Iq(PID_IncreType* PID,float tar,float cur);
 
+void PID_Struct_Init(PID_IncreType* PID,float kp,float ki,float kd,float out_max);
 void PID_Struct_Init_abs(PID_AbsoluteType* PID,float kp,float ki,float kd,float out_max);
 void PID_Struct_Init_abs_nimi(PID_AbsoluteType* PID,float kp,float ki,float kd,float out_max);
-float PID_Vision(PID_AbsoluteType* PID,float err);
+
 float PID_vision(PID_IncreType* PID,float err);
 #endif
