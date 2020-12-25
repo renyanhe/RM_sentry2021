@@ -27,7 +27,36 @@ Project File Date:  12/06/2020
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'RM2020'
-".\Objects\RM2020.axf" - 0 Error(s), 0 Warning(s).
+compiling sentry_holder.c...
+..\sentry\sentry_holder.c(74): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_208.Tar_Postion >= 0.61) CAN1_DATA.M_208.Tar_Postion = 0.61;
+..\sentry\sentry_holder.c(75): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_208.Tar_Postion <= 0.47) CAN1_DATA.M_208.Tar_Postion = 0.47;
+..\sentry\sentry_holder.c(82): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			  if(CAN1_DATA.M_208.Tar_Postion <= 0.47) dir = 1;
+..\sentry\sentry_holder.c(83): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_208.Tar_Postion >= 0.61) dir = 0;
+..\sentry\sentry_holder.c(84): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(dir) CAN1_DATA.M_208.Tar_Postion += 0.0001;
+..\sentry\sentry_holder.c(85): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				else    CAN1_DATA.M_208.Tar_Postion -= 0.0001;
+..\sentry\sentry_holder.c(115): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_206.Tar_Postion>=0.15)    CAN1_DATA.M_206.Tar_Postion = 0.15;
+..\sentry\sentry_holder.c(119): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_208.Tar_Postion >= 0.61) CAN1_DATA.M_208.Tar_Postion = 0.61;
+..\sentry\sentry_holder.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_208.Tar_Postion <= 0.47) CAN1_DATA.M_208.Tar_Postion = 0.47;
+..\sentry\sentry_holder.c(128): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_206.Tar_Postion>=0.15)    CAN1_DATA.M_206.Tar_Postion = 0.15;
+..\sentry\sentry_holder.c(131): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_208.Tar_Postion >= 0.61)   CAN1_DATA.M_208.Tar_Postion = 0.61;
+..\sentry\sentry_holder.c(132): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if(CAN1_DATA.M_208.Tar_Postion <= 0.47) CAN1_DATA.M_208.Tar_Postion = 0.47;
+..\sentry\sentry_holder.c: 12 warnings, 0 errors
+linking...
+Program Size: Code=43338 RO-data=3938 RW-data=3716 ZI-data=1163076  
+FromELF: creating hex file...
+".\Objects\RM2020.axf" - 0 Error(s), 12 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -41,7 +70,7 @@ Package Vendor: Keil
   E:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.2.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

@@ -34,7 +34,7 @@ float PID_Update_Incre(PID_IncreType* PID,float tar,float cur)
 	PID->e2 = PID->e1;
 	PID->e1 = PID->e0;	
 	
-	//PID->out = range(PID->out, -PID->limit, PID->limit);//增量限幅
+	PID->out = range(PID->out, -PID->limit, PID->limit);//增量限幅
 	
 	return PID->out;
 }
@@ -53,6 +53,7 @@ float PID_vision(PID_IncreType* PID,float err)  //哨兵视觉PID
 	
 	PID->e2 = PID->e1;
 	PID->e1 = PID->e0;	
+	PID->out = range(PID->out, -PID->limit, PID->limit);//增量限幅
 	
 	return PID->out;
 }

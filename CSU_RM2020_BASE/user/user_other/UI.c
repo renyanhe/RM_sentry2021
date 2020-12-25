@@ -38,12 +38,12 @@ void page_init()
 	//参数修改页面1
 	PAGE_SET(param_set_page,DIG,7);
 	PAGE_PARAM(param_set_page,0,"duty_snail",pwmval,UINT16);//第一行显示参数设置
-	PAGE_PARAM(param_set_page,1,"M207.Speed.p",CAN1_DATA.M_208.PID_Speed.kp,FLOAT);//第二行显示参数设置
-	PAGE_PARAM(param_set_page,2,"M207.Speed.i",CAN1_DATA.M_208.PID_Speed.ki,FLOAT);
-	PAGE_PARAM(param_set_page,3,"M207.Speed.d",CAN1_DATA.M_208.PID_Speed.kd,FLOAT);
-	PAGE_PARAM(param_set_page,4,"M207.pos.p",  CAN1_DATA.M_208.PID_Postion.kp,FLOAT);
-	PAGE_PARAM(param_set_page,5,"M207.pos.i",  CAN1_DATA.M_208.PID_Postion.ki,FLOAT);
-	PAGE_PARAM(param_set_page,6,"M207.pos.d",  CAN1_DATA.M_208.PID_Postion.kd,FLOAT);
+	PAGE_PARAM(param_set_page,1,"M208.Speed.p",CAN1_DATA.M_208.PID_Speed.kp,FLOAT);//第二行显示参数设置
+	PAGE_PARAM(param_set_page,2,"M208.Speed.i",CAN1_DATA.M_208.PID_Speed.ki,FLOAT);
+	PAGE_PARAM(param_set_page,3,"M208.Speed.d",CAN1_DATA.M_208.PID_Speed.kd,FLOAT);
+	PAGE_PARAM(param_set_page,4,"M208.pos.p",  CAN1_DATA.M_208.PID_Postion.kp,FLOAT);
+	PAGE_PARAM(param_set_page,5,"M208.pos.i",  CAN1_DATA.M_208.PID_Postion.ki,FLOAT);
+	PAGE_PARAM(param_set_page,6,"M208.pos.d",  CAN1_DATA.M_208.PID_Postion.kd,FLOAT);
 	
 	//参数修改页面2
 	PAGE_SET(vs_param_set_page,DIG,6);		
